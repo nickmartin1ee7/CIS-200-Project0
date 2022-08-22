@@ -1,7 +1,5 @@
 namespace Project0.Models;
 
-public class Letter : Parcel
+public class Package : Parcel
 {
-    public Address To { get; }
-    public Address From { get; }
 }
