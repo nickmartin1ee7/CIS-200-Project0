@@ -7,4 +7,10 @@
  *    Letter
  */
 
- System.Console.WriteLine("Hello World");
+using Project0.ClassLib.Models;
+
+var addr = new Address("Home", "123 Apple Rd.", "Louisville", "KY", 123);
+
+Console.WriteLine(addr);
+
+_ = Console.ReadKey();
