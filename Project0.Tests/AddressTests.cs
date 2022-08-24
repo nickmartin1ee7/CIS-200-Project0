@@ -1,3 +1,4 @@
+
 using Project0.ClassLib.Models;
 
 namespace Project0.Tests;
@@ -9,21 +10,10 @@ public class AddressTests
     [TestCase("    ")]
     public void Name_ShouldThrow_WhenInvalid(string name)
     {
-        try
+        Assert.Throws<ArgumentException>(() =>
         {
-            new Address(name,
-                "a",
-                "a",
-                "a",
-                1
-                );
-
-            Assert.Fail();
-        }
-        catch (ArgumentException)
-        {
-            Assert.Pass();
-        }
+            new Address(name, "a", "a", "a", 1);
+        });
     }
 
     [TestCase("")]
@@ -31,21 +21,10 @@ public class AddressTests
     [TestCase("    ")]
     public void Address1_ShouldThrow_WhenInvalid(string address1)
     {
-        try
+        Assert.Throws<ArgumentException>(() =>
         {
-            new Address("a",
-                address1,
-                "a",
-                "a",
-                1
-                );
-
-            Assert.Fail();
-        }
-        catch (ArgumentException)
-        {
-            Assert.Pass();
-        }
+            new Address("a", address1, "a", "a", 1);
+        });
     }
 
     [TestCase("")]
@@ -53,22 +32,10 @@ public class AddressTests
     [TestCase("    ")]
     public void Address2_ShouldThrow_WhenInvalid(string address2)
     {
-        try
+        Assert.Throws<ArgumentException>(() =>
         {
-            new Address("a",
-                "a",
-                address2,
-                "a",
-                "a",
-                1
-                );
-
-            Assert.Fail();
-        }
-        catch (ArgumentException)
-        {
-            Assert.Pass();
-        }
+            new Address("a", "a", address2, "a", "a", 1);
+        });
     }
 
     [TestCase("")]
@@ -76,21 +43,10 @@ public class AddressTests
     [TestCase("    ")]
     public void City_ShouldThrow_WhenInvalid(string city)
     {
-        try
+        Assert.Throws<ArgumentException>(() =>
         {
-            new Address("a",
-                "a",
-                city,
-                "a",
-                1
-                );
-
-            Assert.Fail();
-        }
-        catch (ArgumentException)
-        {
-            Assert.Pass();
-        }
+            new Address("a", "a", city, "a", 1);
+        });
     }
 
     [TestCase("")]
@@ -98,21 +54,10 @@ public class AddressTests
     [TestCase("    ")]
     public void State_ShouldThrow_WhenInvalid(string state)
     {
-        try
+        Assert.Throws<ArgumentException>(() =>
         {
-            new Address("a",
-                "a",
-                "a",
-                state,
-                1
-                );
-
-            Assert.Fail();
-        }
-        catch (ArgumentException)
-        {
-            Assert.Pass();
-        }
+            new Address("a", "a", "a", state, 1);
+        });
     }
 
     [TestCase(-1)]
@@ -120,20 +65,9 @@ public class AddressTests
     [TestCase(100_000)]
     public void ZipCode_ShouldThrow_WhenOutOfRange(int zipCode)
     {
-        try
+        Assert.Throws<ArgumentOutOfRangeException>(() =>
         {
-            new Address("a",
-                "a",
-                "a",
-                "a",
-                zipCode
-                );
-
-            Assert.Fail();
-        }
-        catch (ArgumentOutOfRangeException)
-        {
-            Assert.Pass();
-        }
+            new Address("a", "a", "a", "a", zipCode);
+        });
     }
 }

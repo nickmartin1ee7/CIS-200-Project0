@@ -7,46 +7,38 @@ public class LetterTests
     [Test]
     public void OriginAddress_ShouldThrow_WhenInvalid()
     {
-        try
+        Assert.Throws<ArgumentOutOfRangeException>(() =>
         {
             new Letter(null, new Address("a", "a", "a", "a", 1), 10M);
-
-            Assert.Fail();
-        }
-        catch (ArgumentOutOfRangeException)
-        {
-            Assert.Pass();
-        }
+        });
     }
 
     [Test]
     public void DestinationAddress_ShouldThrow_WhenInvalid()
     {
-        try
+        Assert.Throws<ArgumentOutOfRangeException>(() =>
         {
             new Letter(new Address("a", "a", "a", "a", 1), null, 10M);
-
-            Assert.Fail();
-        }
-        catch (ArgumentOutOfRangeException)
-        {
-            Assert.Pass();
-        }
+        });
     }
 
     [TestCase(-1)]
     public void FixedCost_ShouldThrow_WhenInvalid(decimal fixedCost)
     {
-        try
+        Assert.Throws<ArgumentOutOfRangeException>(() =>
         {
             var addr = new Address("a", "a", "a", "a", 1);
             new Letter(addr, addr, fixedCost);
+        });
+    }
 
-            Assert.Fail();
-        }
-        catch (ArgumentOutOfRangeException)
-        {
-            Assert.Pass();
-        }
+    [TestCase(0)]
+    [TestCase(111.11)]
+    public void FixedCost_ShouldReturn_CtorParameter(decimal fixedCost)
+    {
+        var addr = new Address("a", "a", "a", "a", 1);
+        var letter = new Letter(addr, addr, fixedCost);
+
+        Is.EqualTo(fixedCost).ApplyTo(letter.CalcCost());
     }
 }
