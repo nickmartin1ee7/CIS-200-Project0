@@ -60,7 +60,7 @@ public class Address
         Name = name.Trim().ThrowIfNullOrWhiteSpace(nameof(name));
         Address1 = address1.Trim().ThrowIfNullOrWhiteSpace(nameof(address1));
 
-        Address2 ??= string.Empty;
+        Address2 ??= string.Empty; // Possibly set in ctor overload
 
         City = city.Trim().ThrowIfNullOrWhiteSpace(nameof(city));
         State = state.Trim().ThrowIfNullOrWhiteSpace(nameof(state));

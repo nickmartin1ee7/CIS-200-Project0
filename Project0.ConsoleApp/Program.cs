@@ -50,8 +50,8 @@ foreach (var parcel in parcels)
     Console.WriteLine(parcel);
 }
 
-_ = Console.ReadKey();
+_ = Console.ReadLine();
 
-// Creates a psudo-random cost limited to a max cost for the whole dollar amount
+// Creates a pseudo-random cost limited to a max cost for the whole dollar amount
 decimal GetRandomCost(int maxCost) =>
     (decimal)(Random.Shared.Next(maxCost) + Random.Shared.NextDouble());
