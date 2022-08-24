@@ -50,6 +50,7 @@ foreach (var parcel in parcels)
     Console.WriteLine(parcel);
 }
 
+Console.WriteLine("Press any key to exit...");
 _ = Console.ReadLine();
 
 // Creates a pseudo-random cost limited to a max cost for the whole dollar amount

@@ -30,5 +30,7 @@ public class Letter : Parcel
         return _fixedCost;
     }
 
-    // Note: ToString override not needed. Parcel's implementation suffices.
+    // Note: Rubric says to "override as needed".
+    // This ToString() override is not needed as Parcel's implementation suffices.
+
 }
