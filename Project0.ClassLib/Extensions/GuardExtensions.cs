@@ -49,7 +49,10 @@ internal static class GuardExtensions
     public static TComparable ThrowIfOutOfRange<TComparable>(this TComparable value, TComparable max, TComparable min, string paramName, string errorMessage = "")
         where TComparable : IComparable
     {
-        if (value.CompareTo(max) > 0 && value.CompareTo(min) < 0)
+        //  1 = Means Larger
+        // -1 = Means Less than 
+        //  0 = Means the same
+        if (value.CompareTo(max) != 1 || value.CompareTo(min) != -1)
             throw new ArgumentOutOfRangeException(paramName, errorMessage);
 
         return value;

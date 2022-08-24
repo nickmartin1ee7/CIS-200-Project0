@@ -20,7 +20,7 @@ public class AddressTests
 
             Assert.Fail();
         }
-        catch(ArgumentException)
+        catch (ArgumentException)
         {
             Assert.Pass();
         }
@@ -39,10 +39,10 @@ public class AddressTests
                 "a",
                 1
                 );
-                
+
             Assert.Fail();
         }
-        catch(ArgumentException)
+        catch (ArgumentException)
         {
             Assert.Pass();
         }
@@ -62,10 +62,10 @@ public class AddressTests
                 "a",
                 1
                 );
-                
+
             Assert.Fail();
         }
-        catch(ArgumentException)
+        catch (ArgumentException)
         {
             Assert.Pass();
         }
@@ -84,10 +84,10 @@ public class AddressTests
                 "a",
                 1
                 );
-                
+
             Assert.Fail();
         }
-        catch(ArgumentException)
+        catch (ArgumentException)
         {
             Assert.Pass();
         }
@@ -106,10 +106,10 @@ public class AddressTests
                 state,
                 1
                 );
-                
+
             Assert.Fail();
         }
-        catch(ArgumentException)
+        catch (ArgumentException)
         {
             Assert.Pass();
         }
@@ -128,10 +128,10 @@ public class AddressTests
                 "a",
                 zipCode
                 );
-                
+
             Assert.Fail();
         }
-        catch(ArgumentOutOfRangeException)
+        catch (ArgumentOutOfRangeException)
         {
             Assert.Pass();
         }
