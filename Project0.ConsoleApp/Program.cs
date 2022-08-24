@@ -53,5 +53,5 @@ foreach (var parcel in parcels)
 _ = Console.ReadLine();
 
 // Creates a pseudo-random cost limited to a max cost for the whole dollar amount
-decimal GetRandomCost(int maxCost) =>
+static decimal GetRandomCost(int maxCost) =>
     (decimal)(Random.Shared.Next(maxCost) + Random.Shared.NextDouble());
