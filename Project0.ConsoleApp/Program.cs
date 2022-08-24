@@ -19,6 +19,7 @@ using Project0.ClassLib.Models;
 
 var addresses = new List<Address>
 {
+    new Address("Home", "123 Apple Rd.", "Louisville", "KY", 0),
     new Address("Home", "123 Apple Rd.", "Louisville", "KY", 1),
     new Address("Neighbor 1", "234 Apple Rd.", "Apt 100", "Louisville", "KY", 99999),
     new Address("Neighbor 2", "345 Apple Rd.", "Louisville", "KY", 40213),
