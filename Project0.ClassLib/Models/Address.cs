@@ -57,13 +57,13 @@ public class Address
     /// <param name="zipCode">Cannot be larger than <see cref="MAX_ZIP_CODE"/>, or less than or equal to 0."</param>
     public Address(string name, string address1, string city, string state, int zipCode)
     {
-        Name = name.Trim().ThrowIfNullOrWhiteSpace(nameof(name));
-        Address1 = address1.Trim().ThrowIfNullOrWhiteSpace(nameof(address1));
+        Name = name.ThrowIfNullOrWhiteSpace(nameof(name)).Trim();
+        Address1 = address1.ThrowIfNullOrWhiteSpace(nameof(address1)).Trim();
 
         Address2 ??= string.Empty; // Possibly set in ctor overload
 
-        City = city.Trim().ThrowIfNullOrWhiteSpace(nameof(city));
-        State = state.Trim().ThrowIfNullOrWhiteSpace(nameof(state));
+        City = city.ThrowIfNullOrWhiteSpace(nameof(city)).Trim();
+        State = state.ThrowIfNullOrWhiteSpace(nameof(state)).Trim();
 
         ZipCode = zipCode.ThrowIfOutOfRange(
             max: MAX_ZIP_CODE,
@@ -84,7 +84,7 @@ public class Address
     public Address(string name, string address1, string address2, string city, string state, int zipCode)
         : this(name, address1, city, state, zipCode)
     {
-        Address2 = address2.Trim().ThrowIfNullOrWhiteSpace(nameof(address2));
+        Address2 = address2.ThrowIfNullOrWhiteSpace(nameof(address2)).Trim();
     }
 
     /// <summary>
