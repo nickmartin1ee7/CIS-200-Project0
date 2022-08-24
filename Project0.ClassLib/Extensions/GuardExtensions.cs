@@ -52,7 +52,7 @@ internal static class GuardExtensions
         //  1 = Means Larger
         // -1 = Means Less than 
         //  0 = Means the same
-        if (value.CompareTo(max) != 1 || value.CompareTo(min) != -1)
+        if (value.CompareTo(max) == 1 || value.CompareTo(min) == -1)
             throw new ArgumentOutOfRangeException(paramName, errorMessage);
 
         return value;
