@@ -2,7 +2,7 @@
  * Program: 0
  * Due: 09/09/2022
  * 
- * Class Descriptions in Project0.ClassLib:
+ * Class Descriptions in Program0.ClassLib:
  *    Models.Parcel    An abstract class that defines an origin and destination address, along with a method to calculate the shipping cost.
  *    Models.Letter    A concrete class, inheriting from Parcel, that accepts a fixed shipping cost.
  *    Models.Address   A concrete class that stores data about a named address with an optional second address, as well as the city, state, and zipcode.
@@ -15,7 +15,7 @@
  *    I plan to do this for the rest of the semester since it makes documentation more intuitive. Please let me know if that's an issue.
  */
 
-using Project0.ClassLib.Models;
+using Program0.ClassLib.Models;
 
 var addresses = new List<Address>
 {

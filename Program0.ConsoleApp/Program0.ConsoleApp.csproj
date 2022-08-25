@@ -3,13 +3,13 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>Project0.ConsoleApp</RootNamespace>
+    <RootNamespace>Program0.ConsoleApp</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Project0.ClassLib\Project0.ClassLib.csproj" />
+    <ProjectReference Include="..\Program0.ClassLib\Program0.ClassLib.csproj" />
   </ItemGroup>
 
 </Project>

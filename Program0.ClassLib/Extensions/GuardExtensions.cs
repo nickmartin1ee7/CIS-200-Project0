@@ -1,4 +1,4 @@
-﻿namespace Project0.ClassLib.Extensions;
+﻿namespace Program0.ClassLib.Extensions;
 
 /// <summary>
 /// Provides a useful API for throwing exceptions when evaluating the state of a given parameter.

@@ -1,8 +1,8 @@
 using System.Text;
 
-using Project0.ClassLib.Extensions;
+using Program0.ClassLib.Extensions;
 
-namespace Project0.ClassLib.Models;
+namespace Program0.ClassLib.Models;
 
 /// <summary>
 /// A class describing a shippable address in the United States.

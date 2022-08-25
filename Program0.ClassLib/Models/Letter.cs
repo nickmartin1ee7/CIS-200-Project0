@@ -1,6 +1,6 @@
-using Project0.ClassLib.Extensions;
+using Program0.ClassLib.Extensions;
 
-namespace Project0.ClassLib.Models;
+namespace Program0.ClassLib.Models;
 
 /// <summary>
 /// A fixed-rate shipping cost parcel.
