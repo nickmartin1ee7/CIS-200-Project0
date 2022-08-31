@@ -9,7 +9,7 @@ public class LetterTests
     {
         Assert.Throws<ArgumentOutOfRangeException>(() =>
         {
-            new Letter(null, new Address("a", "a", "a", "a", 1), 10M);
+            new Letter(null!, new Address("a", "a", "a", "a", 1), 10M);
         });
     }
 
@@ -18,7 +18,7 @@ public class LetterTests
     {
         Assert.Throws<ArgumentOutOfRangeException>(() =>
         {
-            new Letter(new Address("a", "a", "a", "a", 1), null, 10M);
+            new Letter(new Address("a", "a", "a", "a", 1), null!, 10M);
         });
     }
 
